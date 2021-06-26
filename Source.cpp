@@ -4,6 +4,7 @@ using namespace std;
 
 int main()
 {
+	
 	string str;
 	bool alphabet[26];
 	for (int i = 0; i < 26; i++)
@@ -12,7 +13,7 @@ int main()
 	cin >> str;
 	for (int i = 0, len = str.length(); i < len; i++)
 		if (((int)str[i] > 64 && (int)str[i] < 91) || ((int)str[i] > 96 && (int)str[i] < 123))
-			alphabet[i] = true;
+			alphabet[((int) str[i] > 96) ? (int) str[i] - 97 : (int) str[i] - 65] = true;
 	bool flag = true;
 	for (int i = 0; i < 27; i++)
 		if (alphabet[i] == false)
